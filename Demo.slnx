@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MSTest/MSTest.csproj" />
+  <Project Path="MTPTestApp/MTPTestApp.csproj" />
+  <Project Path="Tests/Tests.csproj" />
+</Solution>
