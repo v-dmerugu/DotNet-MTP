@@ -56,20 +56,15 @@ namespace MSTest
             Assert.AreEqual(3, count);
         }
 
-        // ✅ Exception test
         [TestMethod]
-        [ExpectedException(typeof(DivideByZeroException))]
-        public void DivideByZero_ShouldThrowException()
-        {
-            // Arrange
-            int a = 10;
-            int b = 0;
-
-            // Act
-            var result = a / b;
-
-            // Assert handled by ExpectedException
-        }
+public void DivideByZero_ShouldThrowException()
+{
+    Assert.ThrowsException<DivideByZeroException>(() =>
+    {
+        int a = 10, b = 0;
+        _ = a / b;
+    });
+}
 
         // ✅ Null check test
         [TestMethod]
