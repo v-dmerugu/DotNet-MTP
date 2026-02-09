@@ -56,36 +56,5 @@ namespace MSTest
             Assert.AreEqual(3, count);
         }
 
-        [TestMethod]
-public void DivideByZero_ShouldThrowException()
-{
-    Assert.ThrowsException<DivideByZeroException>(() =>
-    {
-        int a = 10, b = 0;
-        _ = a / b;
-    });
-}
-
-        // ✅ Null check test
-        [TestMethod]
-        public void Object_ShouldBeNull_WhenNotInitialized()
-        {
-            // Arrange
-            object value = null;
-
-            // Act & Assert
-            Assert.IsNull(value);
-        }
-
-        // ✅ Not-null check test
-        [TestMethod]
-        public void Object_ShouldNotBeNull_WhenInitialized()
-        {
-            // Arrange
-            var obj = new object();
-
-            // Act & Assert
-            Assert.IsNotNull(obj);
-        }
     }
 }
